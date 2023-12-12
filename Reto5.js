@@ -13,4 +13,5 @@ representando el estado de la carretera en cada unidad de tiempo:
 El resultado es un array donde cada elemento muestra la carretera en cada unidad de tiempo.
 Ten en cuenta que si el trineo está en la misma posición que una barrera, entonces toma su lugar en el array.
 Los elfos se inspiraron en este reto de Code Wars.
+Pista: setTimeout() y setInterval()
 */
