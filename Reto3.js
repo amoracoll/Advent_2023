@@ -5,7 +5,14 @@ Tienes la secuencia original de pasos en la fabricación original y la secuencia
 Tu tarea es escribir una función que identifique y devuelva el primer paso extra que se ha añadido o eliminado en la cadena de fabricación. Si no hay ninguna diferencia entre las secuencias, devuelve una cadena vacía.
 */
 
+const original = "arnau";
+const modified = "arnau1";
+
 function findNaughtyStep(original, modified) {
-    // Code here
-    return ''
+    if (original === modified){
+      return "Las dos cadenas de texto son iguales";
+    }else{
+      for (let i = 0; i < original.lenght )
+    }
+    return
   }
