@@ -33,15 +33,17 @@ drawGift(1, '^')
 #
 */
 
-function drawGift(size, symbol){
-   if (size === 0){
-      return "Datos introducidos nulos";
+function drawGift(size, symbol) {
+   if (size === 0) {
+       return "Datos introducidos nulos";
+   } 
+   else if (size === 1) {
+       return `/*\n${symbol}\n*/`;
    }
-   else if (size === 1){
-      return `/*
-      ${symbol}
-      /*`;
+   else{
+      
    }
+   
 }
 
-console.log(drawGift(1,"@"));
+console.log(drawGift(1, "#"));
