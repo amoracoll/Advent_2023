@@ -34,16 +34,28 @@ drawGift(1, '^')
 */
 
 function drawGift(size, symbol) {
-   if (size === 0) {
-       return "Datos introducidos nulos";
-   } 
-   else if (size === 1) {
-       return `/*\n${symbol}\n*/`;
+   if (size % 2 === 0) {
+     return "El tamaño debe ser impar";
    }
-   else{
-      
+ 
+   let result = "";
+   const halfSize = Math.floor(size / 2);
+ 
+   for (let i = 0; i < size; i++) {
+     if (i === 0 || i === size - 1) {
+       result += " ".repeat(halfSize) + "#".repeat(size) + "\n";
+     } else if (i <= halfSize) {
+       const symbols = symbol.repeat(i);
+       const spaces = " ".repeat(halfSize - i);
+       result += spaces + "#" + symbols + "#" + "\n";
+     } else {
+       const symbols = symbol.repeat(size - i);
+       const spaces = " ".repeat(i - halfSize);
+       result += spaces + "#" + symbols + "#" + "\n";
+     }
    }
-   
-}
-
-console.log(drawGift(1, "#"));
+ 
+   return result;
+ }
+ 
+ console.log(drawGift(5, "#"));
