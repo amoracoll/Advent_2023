@@ -18,6 +18,28 @@ Por ejemplo si recibimos la cadena "123" y el número 4 como altura, tendríamos
   |   
 */
 
-function createChristmasTree(ornaments, height) {
-    return '|'
+function createChristmasTree(height) {
+    for (let i = 1; i <= height; i++) {
+     //Reiniciamos variable para cada fila
+     let patron = " ";
+  
+      // Agregar espacios en blanco antes de los números
+      for (let espacio = 1; espacio <= height - i; espacio++) {
+        patron += "  ";
+      }
+  
+      // Agregar números ascendentes, primera mitad
+      for (let j = 1; j <= i; j++) {
+        patron += j + " ";
+      }
+  
+      // Agregar números descendentes (sin incluir el último), segunda mitad
+      for (let k = i - 1; k >= 1; k--) {
+        patron += k + " ";
+      }
+  
+      console.log(patron);
+    }
   }
+  
+  createChristmasTree(10);
