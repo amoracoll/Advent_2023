@@ -24,7 +24,7 @@ function toUpperCase(lista)
                 fraseAuxiliar += lista[i][x];
             }
         }
-        //Añadimos frase completa a la lista
+        //Añadimos frase completa a
         listaAuxiliar.push(fraseAuxiliar);
         fraseAuxiliar = "";
     }
