@@ -27,3 +27,24 @@
 // compile('--¿+++?') // -2
 // // - 1 - 1 = -2
 
+//TODO: funcion no acabada
+function compile(code){
+    let contador = 0;
+
+    for (let i = 0; i < code.length; i ++){
+        if (code[i] === "+"){
+            contador++;
+        }
+        else if (code[i] === "-"){
+            contador--;
+        }
+        else if (code[i] === "*"){
+            contador * 2;
+        }
+        else if (code[i] === "¿" && contador > 0){
+
+        }
+    }
+    
+    return;
+}
