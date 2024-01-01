@@ -10,23 +10,38 @@ const dishes = [
     ["cake", "flour", "sugar", "egg"],
     ["hot chocolate", "chocolate", "milk", "sugar"],
     ["pizza", "sauce", "tomato", "cheese", "ham"],
-  ];
+];
 
-  function organizeChristmasDinner(dishes){
-    //Creamos una lista con todos los ingredientes
+function organizeChristmasDinner(dishes) {
+    // Creamos una lista con todos los ingredientes
     let ingredientesUnicos = [];
 
-    for (let i = 0; i < dishes.length; i++){
-        for (let x = 1; x < dishes[i].length; x++){
-            if (!ingredientesUnicos.includes(dishes[i][x])){
+    for (let i = 0; i < dishes.length; i++) {
+        for (let x = 1; x < dishes[i].length; x++) {
+            if (!ingredientesUnicos.includes(dishes[i][x])) {
                 ingredientesUnicos.push(dishes[i][x]);
             }
         }
     }
 
-    
+    let textoSalida = "";
 
-    return ingredientesUnicos;
-  };
+    for (let i = 0; i < ingredientesUnicos.length; i++) {
+        // Corrección aquí: Cambiado dishes[i] por ingredientesUnicos[i]
+        textoSalida += `${ingredientesUnicos[i]} aparece en los siguientes platos: `;
 
-  console.log(organizeChristmasDinner(dishes));
+        for (let x = 0; x < dishes.length; x++) {
+            // Corrección aquí: Cambiado dishes[x] por dishes[x][0]
+            if (dishes[x].includes(ingredientesUnicos[i])) {
+                textoSalida += `${dishes[x][0]}, `;
+            }
+        }
+
+        textoSalida = textoSalida.slice(0, -2); // Elimina la coma y el espacio extra al final
+        textoSalida += "\n";
+    }
+
+    return textoSalida;
+}
+
+console.log(organizeChristmasDinner(dishes));
