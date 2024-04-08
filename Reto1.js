@@ -31,4 +31,4 @@ function findFirstRepeated(gifts) {
 const resultados = findFirstRepeated(gifts);
 console.log(resultados);
 
-console.log("Ejercicio finalizado");
+console.log("Ejercicio");
