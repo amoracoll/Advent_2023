@@ -7,7 +7,7 @@ En otras palabras, si hay más de un número repetido, debes devolver el número
 Si no hay números repetidos, devuelve -1.
 */
 
-const gifts = [1,2,3,2,1];
+const gifts = [1, 2, 3, 2, 1];
 
 function findFirstRepeated(gifts) {
     let elementoBuscado = null;
@@ -16,7 +16,7 @@ function findFirstRepeated(gifts) {
         let regaloActual = gifts[i];
 
         //Verificar si el regalo actual ha sido visto antes
-        if (elementosVistos.includes(regaloActual)){
+        if (elementosVistos.includes(regaloActual)) {
             elementoBuscado = regaloActual;
             break;
         }
@@ -25,8 +25,10 @@ function findFirstRepeated(gifts) {
     }
 
     return elementoBuscado;
-  }
+}
 
-  //Resultado
-  const resultados = findFirstRepeated(gifts);
-  console.log(resultados);
+//Resultado
+const resultados = findFirstRepeated(gifts);
+console.log(resultados);
+
+console.log("Ejercicio finalizado");
