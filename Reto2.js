@@ -19,9 +19,13 @@ function manufacture(gifts, materials) {
 
         // Comprobamos todos los caracteres
         for (let j = 0; j < gift.length; j++) {
+
             const material = gift[j];
+
             if (!materials.includes(material)) {
+
                 canManufacture = false;
+                
                 break;
             }
         }
